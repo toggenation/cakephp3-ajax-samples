@@ -22,13 +22,13 @@ Because composer.json contains all the needed packages run composer to complete 
 
 Create the posts database (make sure you don't currently have a posts database as this script will drop it)
 
-mysql -u<username> -p < config/schema/posts.sql
+	mysql -u<username> -p < config/schema/posts.sql
 
 Modify config/app.php to connect to the database
 
 Run the cakephp internal server
 
-bin/cake server
+	bin/cake server
 
 connect with browser to 
 
