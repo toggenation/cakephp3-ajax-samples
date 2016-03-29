@@ -10,11 +10,15 @@
 
 Clone the repository to your local drive
 
-Run:
+Change directory into the repository and:
 
-    php composer.phar install
+Get composer
 
-This will install the Cakephp and other files needed
+	curl -s https://getcomposer.org/installer | php
+
+Because composer.json contains all the needed packages run composer to complete the install of the vendor/cakephp and other files
+
+	php composer.phar install
 
 Create the posts database (make sure you don't currently have a posts database as this script will drop it)
 
@@ -22,7 +26,7 @@ mysql -u<username> -p < config/schema/posts.sql
 
 Modify config/app.php to connect to the database
 
-Run cakephp internal server
+Run the cakephp internal server
 
 bin/cake server
 
