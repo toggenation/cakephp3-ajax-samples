@@ -4,6 +4,7 @@
         <li><?= $this->Html->link(__('New Post'), ['action' => 'add']) ?></li>
     </ul>
 </nav>
+
 <div class="posts index large-9 medium-8 columns content">
     <h3><?= __('Posts') ?></h3>
     <table cellpadding="0" cellspacing="0">
