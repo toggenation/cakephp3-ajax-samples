@@ -20,7 +20,7 @@ Because composer.json contains all the needed packages run composer to complete 
 
 	php composer.phar install
 
-Create the posts database (make sure you don't currently have a posts database as this script will drop it)
+Create the posts database 
 
 	mysql -u<username> -p < config/schema/posts.sql
 
