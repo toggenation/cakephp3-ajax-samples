@@ -90,8 +90,8 @@ class PostsController extends AppController
     }
 
     public function ajaxedit($id = null){
-        // edit and add is 
         
+        // edit and add is the same except for passing id in
         if ( $id != null ) {
             $post = $this->Posts->get($id, [
                 'contain' => []
@@ -108,8 +108,8 @@ class PostsController extends AppController
              
                if ($this->Posts->save($post)) {
                     $message = 'The post has been saved.';
-                    $data = $this->data;
-                    $redirect = Router::url(['controller' => 'timezone', 'action' => 'get_time']);
+                    $data = $this->request->data;
+                    $redirect = Router::url(['controller' => 'posts', 'action' => 'index']);
                     $this->set('success', compact('message', 'data', 'redirect'));
                } else {
                     $message = "The data could not be saved";
@@ -130,7 +130,7 @@ class PostsController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $post = $this->Posts->get($id);
         if ($this->Posts->delete($post)) {
-            $this->Flash->warning(__('The post has been deleted.'));
+            $this->Flash->success(__('The post has been deleted.'));
         } else {
             $this->Flash->error(__('The post could not be deleted. Please, try again.'));
         }
