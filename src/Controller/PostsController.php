@@ -21,9 +21,12 @@ class PostsController extends AppController
     public function index()
     {
         $posts = $this->paginate($this->Posts);
+	
+        //$this->log($posts->toArray());
 
         $this->set(compact('posts'));
-        $this->set('_serialize', ['posts']);
+//        $this->set('_serialize', ['posts']);
+//	$this->set('_rootNode', 'rooter');
     }
 
     /**

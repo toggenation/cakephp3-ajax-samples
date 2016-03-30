@@ -25,8 +25,9 @@ class TimezoneController extends AppController {
         // no longer model $useTable = false;
         // model-less forms use src/Form/TimezoneForm.php
         $timezone = new TimezoneForm();
-        $city_list = $timezone->get_cities();
-        $this->set(compact('timezone', 'city_list'));
+	$city_list = $timezone->get_cities();
+	$title = "City Time Retriever";
+        $this->set(compact('timezone', 'city_list', 'title'));
     }
 
     public function ajaxGetTime() {

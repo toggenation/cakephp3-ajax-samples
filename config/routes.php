@@ -50,8 +50,15 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->connect('/', array('controller' => 'timezone', 'action' => 'get_time'));
     # $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
+    $routes->extensions (['xml']);
+     $routes->resources('Posts',
+	    [
+	    	'only' => ['index']
+	    ]
+    );
 
-    /**
+
+       /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);

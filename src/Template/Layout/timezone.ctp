@@ -2,8 +2,9 @@
 // src/Template/Layout/timezone.ctp
 use Cake\Core\Configure;
 
-$cakeDescription = "My Cake Description";
 $cakeVersion = Configure::version();
+$this->assign('title', $title);
+$this->prepend('title', "A prepended argument ");
 
 ?>
 <!DOCTYPE html>
@@ -11,8 +12,7 @@ $cakeVersion = Configure::version();
     <head>
         <?php echo $this->Html->charset(); ?>
         <title>
-            <?php echo $cakeDescription ?>:
-            <?php echo $title_for_layout; ?>
+            <?php echo $this->fetch('title'); ?>
         </title>
         <?php
         echo $this->Html->meta('icon');
@@ -58,7 +58,7 @@ $cakeVersion = Configure::version();
 
                 <?php
                 echo $this->Html->link(
-                        $this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')), 'http://www.cakephp.org/', array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
+                        $this->Html->image('cake.power.gif', array('alt' => "The Cake Logo", 'border' => '0')), 'http://www.cakephp.org/', array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
                 );
                 ?>
 
