@@ -101,7 +101,7 @@ class PostsController extends AppController
     }
 
     public function ajaxedit($id = null){
-        
+        $this->set("_serialize", true);
         // edit and add is the same except for passing id in
         if ( $id != null ) {
             $post = $this->Posts->get($id, [
