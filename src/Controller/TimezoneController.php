@@ -72,6 +72,8 @@ class TimezoneController extends AppController {
                 }
             }
         }
+        
+        $this->set('_serialize', ['content']);
 
         //set current date as content to show in view
         $this->set(compact('content'));
