@@ -2,6 +2,7 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Post'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('View as XML'), ['action' => 'index', '_ext' => 'xml']) ?></li>
     </ul>
 </nav>
 
