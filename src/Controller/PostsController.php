@@ -18,8 +18,17 @@ class PostsController extends AppController
      *
      * @return \Cake\Network\Response|null
      */
+    
+    public $paginate = [
+        'limit' => 8
+        
+    ];
+    
+    
     public function index()
     {
+        
+    
         $posts = $this->paginate($this->Posts);
 	
         //$this->log($posts->toArray());
