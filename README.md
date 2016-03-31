@@ -6,6 +6,12 @@
 * Modelless Form with AJAX JQuery code in js/global.js
 	* Inspired by: http://miftyisbored.com/a-complete-tutorial-on-cakephp-and-ajax-forms-using-jquery/ 
 
+* View Helper PostsHelper that modifies the XML output
+	* Inspired by: CakePHP 3 Documentation
+	* Access it via http://localhost:8765/posts.xml
+	* src/View/Helper/PostsHelper.php
+	* src/Template/Posts/xml/index.ctp
+
 ## To get the samples working
 
 Clone the repository to your local drive
