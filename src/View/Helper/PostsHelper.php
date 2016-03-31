@@ -8,17 +8,27 @@ use Cake\Utility\Hash;
 class PostsHelper extends Helper {
 
     
-    public function fix_array($posts){
+    public function fix_array($posts, $fields){
+        
+        $this->fix_fields = $fields;
         return Hash::map($posts, '{n}', [$this, 'change_id'] );
     }
     
     public function change_id($past) {
+        $ffa = $this->fix_fields;
+        if ( ! is_array($ffa)){
+            $ffa = [ $ffa ];
+        }
+            
+        foreach ($ffa as $ff){
+            
+            $fld = $past[$ff];
 
-        $id = $past['id'];
+            unset($past[$ff]);
 
-        unset($past['id']);
-
-        $past['@id'] = $id;
+            $past['@' . $ff] = $fld;
+        }
+        
 
         return $past;
         

@@ -24,7 +24,15 @@ class PostsController extends AppController
 	
         //$this->log($posts->toArray());
 
-        $this->set(compact('posts'));
+        // make into elements e.g.
+        // <posts id="1">
+        // instead of 
+        // <posts>
+        //      <id>1</id>
+        
+        $elements = ['id'];
+        
+        $this->set(compact('posts', 'elements'));
 //        $this->set('_serialize', ['posts']);
 //	$this->set('_rootNode', 'rooter');
     }
