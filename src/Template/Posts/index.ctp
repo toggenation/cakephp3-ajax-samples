@@ -7,6 +7,11 @@
                 [
                     'action' => 'index', '_ext' => 'xml'],
                 ['title' => 'View all Posts as XML']) ?></li>
+        <li><?= $this->Html->link(
+                __('View as JSON'), 
+                [
+                    'action' => 'index', '_ext' => 'json'],
+                ['title' => 'View all Posts as JSON']) ?></li>
     </ul>
 </nav>
 

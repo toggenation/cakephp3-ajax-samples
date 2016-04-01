@@ -50,7 +50,7 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->connect('/', array('controller' => 'timezone', 'action' => 'get_time'));
     # $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
-    $routes->extensions (['xml']);
+    $routes->extensions (['xml', 'json']);
      $routes->resources('Posts',
 	    [
 	    	'only' => ['index']
