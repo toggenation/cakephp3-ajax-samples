@@ -21,7 +21,6 @@ class PostsController extends AppController
     
     public $paginate = [
         'limit' => 8
-        
     ];
     
     
@@ -40,12 +39,15 @@ class PostsController extends AppController
         //      <id>1</id>
         
         $elements = ['id'];
+        $all_posts = $this->Posts->find('all');
         
-        $this->set(compact('posts', 'elements'));
+        $this->set(compact('posts', 'elements', 'all_posts'));
 //        $this->set('_serialize', ['posts']);
 //	$this->set('_rootNode', 'rooter');
     }
 
+    
+    
     /**
      * View method
      *
