@@ -14,7 +14,7 @@ $(document).ready(function () {
         $.post(form_action,
                 $(this).serialize(),
                 afterValidate,
-                "json"
+                "JSON"
                 );
         return false;
     });

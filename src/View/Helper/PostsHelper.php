@@ -27,6 +27,7 @@ class PostsHelper extends Helper {
             unset($past[$ff]);
 
             $past['@' . $ff] = $fld;
+            
         }
         
 

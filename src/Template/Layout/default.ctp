@@ -33,7 +33,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('css') ?>
     <?php echo $this->Html->script([
     'https://code.jquery.com/jquery-1.12.2.min.js',
-    'add_edit'
     ]); ?>
     
     <?= $this->fetch('script') ?>
@@ -52,6 +51,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </ul>
         </div>
     </nav>
+    
+    <?= $this->Flash->render('auth') ?>
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
         <?= $this->fetch('content') ?>

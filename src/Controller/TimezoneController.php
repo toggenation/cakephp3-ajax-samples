@@ -10,6 +10,9 @@ use Cake\Utility\Hash;
 
 class TimezoneController extends AppController {
 
+    public function isAuthorized($user) {
+        return true;
+    }
     public function beforeFilter(Event $event) {
         parent::beforeFilter($event);
 
