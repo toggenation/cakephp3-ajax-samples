@@ -19,6 +19,10 @@ class PostsController extends AppController
      * @return \Cake\Network\Response|null
      */
     
+      public function isAuthorized($user) {
+        return true;
+    }
+    
     public $paginate = [
         'limit' => 8
     ];
@@ -40,8 +44,8 @@ class PostsController extends AppController
         
         $elements = ['id'];
         $all_posts = $this->Posts->find('all');
-        
-        $this->set(compact('posts', 'elements', 'all_posts'));
+        $qs = $this->request->query;
+        $this->set(compact('posts', 'elements', 'all_posts', 'qs'));
 //        $this->set('_serialize', ['posts']);
 //	$this->set('_rootNode', 'rooter');
     }
@@ -113,6 +117,7 @@ class PostsController extends AppController
 
     public function ajaxedit($id = null){
         $this->set("_serialize", true);
+        
         // edit and add is the same except for passing id in
         if ( $id != null ) {
             $post = $this->Posts->get($id, [

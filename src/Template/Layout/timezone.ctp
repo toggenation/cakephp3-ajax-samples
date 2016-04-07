@@ -40,6 +40,7 @@ $this->prepend('title', "A prepended argument ");
         <div id="container">
             <div id="content">
 
+                <?= $this->Flash->render('auth') ?>
 <?= $this->Flash->render() ?>
 
                 <?= $this->fetch('content') ?>

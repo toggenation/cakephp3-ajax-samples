@@ -1,3 +1,5 @@
+<?php $this->Html->script('add_edit') ?>
+
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
@@ -17,6 +19,13 @@
 
 <div class="posts index large-9 medium-8 columns content">
     <h3><?= __('Posts') ?></h3>
+    <?php if(!empty($qs)): ?>
+    <ul>
+   <?php foreach($qs as $k => $v): ?>
+        <li><?php echo $k . " : " . $v; ?> </li>
+    <?php     endforeach; ?>
+        </ul>
+        <?php endif; ?>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
