@@ -1,7 +1,9 @@
-<?php echo $this->Html->script('add_edit') ?>
+<?php echo $this->Html->script('add_edit', [
+    'inline' => false,
+    'block' => 'script']) ?>
 
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
+<nav class="col-md-2">
+    <ul class="nav side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
                 __('Delete'),
@@ -12,7 +14,7 @@
         <li><?= $this->Html->link(__('List Posts'), ['action' => 'index']) ?></li>
     </ul>
 </nav>
-<div class="posts form large-9 medium-8 columns content">
+<div class="col-md-10">
     <?= $this->Form->create($post, 
             [   'data-ajax' => 'ajax_edit',
                 'data-redirect' => $this->Url->build(['action' => 'index']),

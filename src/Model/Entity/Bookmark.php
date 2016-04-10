@@ -20,7 +20,7 @@ class Bookmark extends Entity
 {
 
     
-    use Cake\Collection\Collection;
+   // use Cake\Collection\Collection;
 
     protected function _getTagString() {
         if (isset($this->_properties['tag_string'])) {

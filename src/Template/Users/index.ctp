@@ -1,14 +1,14 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
+<nav class="col-md-2">
+    <ul class="nav nav-stacked">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Bookmarks'), ['controller' => 'Bookmarks', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Bookmark'), ['controller' => 'Bookmarks', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="users index large-9 medium-8 columns content">
+<div class="col-md-10">
     <h3><?= __('Users') ?></h3>
-    <table cellpadding="0" cellspacing="0">
+    <table class="table table-striped table-condensed table-bordered">
         <thead>
             <tr>
                 <th><?= $this->Paginator->sort('id') ?></th>
@@ -23,7 +23,7 @@
             <?php foreach ($users as $user): ?>
             <tr>
                 <td><?= $this->Number->format($user->id) ?></td>
-                <td><?= h($this->Text->truncate($user->email, 7)) ?></td>
+                <td><?= h($user->email) ?></td>
                 <td><?= h($this->Text->truncate($user->password, 7)) ?></td>
                 <td><?= h($user->created) ?></td>
                 <td><?= h($user->modified) ?></td>

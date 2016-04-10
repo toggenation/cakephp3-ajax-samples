@@ -10,6 +10,12 @@ use App\Controller\AppController;
  */
 class TagsController extends AppController
 {
+    
+    
+    public function isAuthorized($user){
+        parent::isAuthorized($user);
+        return true;
+    }
 
     /**
      * Index method

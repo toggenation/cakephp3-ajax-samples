@@ -1,16 +1,17 @@
-<?php echo $this->Html->script('add_edit') ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
+<?php echo $this->Html->script('add_edit', [
+    'inline' => false,
+    'block' => 'script'
+    ]) ?>
+
+<div class="container-fluid">
+<nav class="col-md-2">
+    <ul class="side-nav nav nav-stacked">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List Posts'), ['action' => 'index']) ?></li>
     </ul>
 </nav>
 
-
-
-
-
-<div class="posts form large-9 medium-8 columns content">
+<div class="col-md-10">
     <?=
     $this->Form->create(
             $post, [
@@ -37,4 +38,5 @@
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
 
-</div
+</div>
+    </div>

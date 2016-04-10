@@ -4,3 +4,4 @@
 /logs/*
 /nbproject/
 composer.phar
+/bower_components
