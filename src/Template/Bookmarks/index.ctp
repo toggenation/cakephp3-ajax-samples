@@ -1,5 +1,5 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
+<nav class="col-md-2 nav">
+    <ul class="nav nav-stacked">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Bookmark'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
@@ -8,9 +8,10 @@
         <li><?= $this->Html->link(__('New Tag'), ['controller' => 'Tags', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="bookmarks index large-9 medium-8 columns content">
+<div class="col-md-10">
+    <?php //debug($bookmarks); ?>
     <h3><?= __('Bookmarks') ?></h3>
-    <table cellpadding="0" cellspacing="0">
+    <table class="table table-bordered table-condensed table-striped">
         <thead>
             <tr>
                 <th><?= $this->Paginator->sort('id') ?></th>
@@ -25,7 +26,7 @@
             <?php foreach ($bookmarks as $bookmark): ?>
             <tr>
                 <td><?= $this->Number->format($bookmark->id) ?></td>
-                <td><?= $bookmark->has('user') ? $this->Html->link($bookmark->user->id, ['controller' => 'Users', 'action' => 'view', $bookmark->user->id]) : '' ?></td>
+                <td><?= $bookmark->has('user') ? $this->Html->link($bookmark->user->email, ['controller' => 'Users', 'action' => 'view', $bookmark->user->id]) : '' ?></td>
                 <td><?= h($bookmark->title) ?></td>
                 <td><?= h($bookmark->created) ?></td>
                 <td><?= h($bookmark->modified) ?></td>

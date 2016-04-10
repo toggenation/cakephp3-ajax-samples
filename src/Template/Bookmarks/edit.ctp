@@ -1,5 +1,6 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
+<div class="container">
+<nav class="nav col-md-2">
+    <ul class="nav nav-stacked">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
                 __('Delete'),
@@ -14,7 +15,7 @@
         <li><?= $this->Html->link(__('New Tag'), ['controller' => 'Tags', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="bookmarks form large-9 medium-8 columns content">
+<div class="col-md-10">
     <?= $this->Form->create($bookmark) ?>
     <fieldset>
         <legend><?= __('Edit Bookmark') ?></legend>
@@ -28,4 +29,5 @@
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
+</div>
 </div>

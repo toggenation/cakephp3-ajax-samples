@@ -62,7 +62,7 @@ $(document).ready(function () {
                 $('[name=' + field + ']').parent('div').removeClass('error');
                 $('[name=' + field + ']').next('div').remove();
                 $('[name=' + field + ']').parent('div').addClass('error');
-                $('[name=' + field + ']').after('<div class="error-message">' + error_message + '</div>');
+                $('[name=' + field + ']').after('<div style="margin-top: 15px;" class="alert alert-warning"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <strong>Warning: </strong>' + error_message + '</div>');
             
             _loadingDiv.hide();
         });
@@ -74,15 +74,16 @@ $(document).ready(function () {
         var classes = 'message';
         
         if(errortype == 'success'){
-            classes += ' success';
+            classes += ' alert alert-success';
         } else {
-            classes += ' error';
+            classes += ' alert alert-danger';
             
         };
         
         var _insert = $(document.createElement('div')).css('display', 'none');
         _insert.attr('id', 'flashMessage').addClass(classes).text(message);
-        _insert.insertAfter($("nav:first")).fadeIn();
+        
+        _insert.insertAfter($("legend")).fadeIn();
     }
 
 });

@@ -1,20 +1,23 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-
-</nav>
-
-<div class="bookmarks view large-9 medium-8 columns content">
-
-<h1>Login</h1>
-<dl>
-    <dt>Email</dt>
-    <dd>me@example.com</dd>
-    <dt>Password</dt>
-    <dd>me</dd>
-</dl>
-<?= $this->Form->create() ?>
-<?= $this->Form->input('email') ?>
-<?= $this->Form->input('password') ?>
-<?= $this->Form->button('Login') ?>
-<?= $this->Form->end() ?>
-
+<div class="container">
+    <?php $this->extend('../Layout/signin'); ?>
+    <?= $this->Form->create($users, ['class' => 'form-signin']); ?>
+    <h2 class="form-signin-heading">Login</h2>
+    <?= $this->Form->input('email') ?>
+    <?= $this->Form->input('password') ?>
+    <?= $this->Form->button('Login', ['class' => 'btn btn-lg btn-primary btn-block']) ?>
+    <?= $this->Form->end() ?>
+    
+    <table class="table" style="width: 300px; margin: auto;">
+        <tr>
+            <th colspan="2">Login Details</th>
+        </tr>
+        <tr>
+            <th>User</th>
+            <th>Pass</th>
+        </tr>
+        <tr>
+            <td>me@example.com</td>
+            <td>me</td>
+        </tr>
+    </table>
 </div>

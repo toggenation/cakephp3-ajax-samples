@@ -222,3 +222,5 @@ Type::build('datetime')
     ->useLocaleParser();
 
 Plugin::load('ContactManager', ['bootstrap' => false, 'routes' => true]);
+
+Plugin::load('BootstrapUI');

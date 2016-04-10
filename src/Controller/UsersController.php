@@ -11,6 +11,10 @@ use App\Controller\AppController;
  */
 class UsersController extends AppController {
 
+    public function isAuthorized($user) {
+        parent::isAuthorized($user);
+        return true;
+    }
     public function beforeFilter(\Cake\Event\Event $event) {
         $this->Auth->allow(['add', 'login']);
     }
@@ -21,6 +25,9 @@ class UsersController extends AppController {
     }
 
     public function login() {
+        
+        
+       // $this->layout('layout');
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
             if ($user) {
@@ -29,6 +36,9 @@ class UsersController extends AppController {
             }
             $this->Flash->error('Your username or password is incorrect.');
         }
+        
+        $users = $this->Users;
+        $this->set('users', $users);
     }
 
     /**

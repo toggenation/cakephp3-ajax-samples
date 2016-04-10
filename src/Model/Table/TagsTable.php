@@ -14,7 +14,7 @@ use Cake\Validation\Validator;
  */
 class TagsTable extends Table
 {
-
+    
     /**
      * Initialize method
      *
