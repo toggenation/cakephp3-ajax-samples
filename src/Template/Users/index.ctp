@@ -1,4 +1,5 @@
 <div class="container">
+    <div class="row">
 <nav class="col-md-2">
     <ul class="nav nav-stacked">
         <li class="heading"><?= __('Actions') ?></li>
@@ -50,3 +51,4 @@
     </div>
 </div>
 </div>
+    </div>

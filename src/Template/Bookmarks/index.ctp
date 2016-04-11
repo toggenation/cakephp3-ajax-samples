@@ -1,4 +1,5 @@
 <div class="container">
+    <div class="row">
 <nav class="col-md-2 nav">
     <ul class="nav nav-stacked">
         <li class="heading"><?= __('Actions') ?></li>
@@ -52,4 +53,5 @@
         <p><?= $this->Paginator->counter() ?></p>
     </div>
 </div>
+        </div>
 </div>

@@ -3,35 +3,56 @@
     .col-lg-offset-6 {
         background-color: pink;
     }
+    .tab-pane {
+        padding: 40px 10px 0px 10px;
+    }
+    .welcome {
+        text-align: center;
+    }
 </style>
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-9">
-        <div class="col-lg-4">col-lg-4</div>
-        <div class="col-lg-4">col-lg-4</div>
-        <div class="col-lg-4">col-lg-4</div>
-        </div>
+        <div class="col-sm-6 tabbable">
+            <ul id="MyTabs" class="nav nav-tabs">
+                <li class="active"><a href="#android" data-toggle="tab">Android</a></li>
+                <li><a href="#blackberry" data-toggle="tab">Blackberry</a></li>
+                <li><a href="#ios" data-toggle="tab">iOS</a></li>
+                <li><a href="#windows" data-toggle="tab">Windows</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="android">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,</p>
+                    
+            </div>
+                <div class="tab-pane fade in" id="blackberry"><p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,</p>
+                    
+            </div>
+                <div class="tab-pane fade in" id="ios"><p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,</p>
+                    
+            </div>
+                <div class="tab-pane fade in" id="windows"><p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,</p>
+                    
+            </div>
+         </div>
     </div>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="col-lg-1">col-lg-1</div>
-            <div class="col-lg-1">col-lg-1</div>
-            <div class="col-lg-1">col-lg-1</div>
-            <div class="col-lg-1">col-lg-1</div>
-            <div class="col-lg-1">col-lg-1</div>
-            <div class="col-lg-1">col-lg-1</div>
-            <div class="col-lg-1">col-lg-1</div>
-            <div class="col-lg-1">col-lg-1</div>
-            <div class="col-lg-1">col-lg-1</div>
-            <div class="col-lg-1">col-lg-1</div>
-            <div class="col-lg-1">col-lg-1</div>
-            <div class="col-lg-1">col-lg-1</div>
-        </div>
     </div>
-    <div class="col-lg-2">Left</div>
-    <div class="col-lg-offset-6">Right</div>
-    <div class="row">
+   
         <div class="col-md-8 col-md-offset-2 welcome">
             <h1>Welcome to our website</h1>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula

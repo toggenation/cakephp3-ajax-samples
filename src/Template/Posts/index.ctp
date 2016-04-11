@@ -1,6 +1,6 @@
 <div class="container">
     
-    <div class="row-fluid">
+    <div class="row">
         <div class="col-md-2">
             <nav class="navbar-left nav nav-pills nav-stacked sidebar-module" id="actions-sidebar">
                 <ul class="nav nav-pills nav-stacked">
@@ -18,7 +18,7 @@
                         ?></li>
                 </ul>
             </nav>
-</div>
+        </div>
         <div class="col-md-10">
 
             <h3><?= __('Posts') ?></h3>
