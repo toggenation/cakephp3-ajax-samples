@@ -1,3 +1,5 @@
+<div class="container">
+    <div class="row">
 <nav class="col-md-2 nav">
     <ul class="nav nav-stacked">
         <li class="heading"><?= __('Actions') ?></li>
@@ -42,9 +44,14 @@
     <div class="paginator">
         <ul class="pagination">
             <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
+            <?= $this->Paginator->numbers([
+                'after' => '</li>',
+               'before' => '<li class="pagination">'
+            ]) ?>
             <?= $this->Paginator->next(__('next') . ' >') ?>
         </ul>
         <p><?= $this->Paginator->counter() ?></p>
     </div>
+</div>
+        </div>
 </div>

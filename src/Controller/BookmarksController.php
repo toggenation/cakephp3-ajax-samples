@@ -68,12 +68,16 @@ class BookmarksController extends AppController {
     
     public function index()
 {
-    $this->paginate = [
+        
+        
+    $pag = [
         'conditions' => [
             'Bookmarks.user_id' => $this->Auth->user('id'),
         ],
         'contain' => ['Users']
     ];
+    $this->paginate += $pag;
+    
     $this->set('bookmarks', $this->paginate($this->Bookmarks));
     $this->set('_serialize', ['bookmarks']);
 }

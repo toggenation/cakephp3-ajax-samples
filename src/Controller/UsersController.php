@@ -16,6 +16,7 @@ class UsersController extends AppController {
         return true;
     }
     public function beforeFilter(\Cake\Event\Event $event) {
+        parent::beforeFilter($event);
         $this->Auth->allow(['add', 'login']);
     }
 
