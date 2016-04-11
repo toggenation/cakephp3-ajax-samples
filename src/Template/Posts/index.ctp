@@ -54,7 +54,10 @@
             <nav>
                 <ul class="pagination">
                     <?= $this->Paginator->prev('&laquo; ' . __('previous'), ['escape' => false]) ?>
-                     <?= $this->Paginator->numbers() ?>
+                     <?= $this->Paginator->numbers([
+                'after' => '</li>',
+                'before' => '<li class="pagination">'
+            ]) ?>
                     <?= $this->Paginator->next(__('next') . ' &raquo;' , ['escape' => false]) ?>
                 </ul>
                

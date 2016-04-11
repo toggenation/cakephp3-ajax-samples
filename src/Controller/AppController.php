@@ -29,6 +29,14 @@ use Cake\Event\Event;
  */
 class AppController extends Controller {
 
+    public $paginate = [];
+    
+    
+    public function beforeFilter(Event $event) {
+        parent::beforeFilter($event);
+        $this->paginate['limit'] = 8;
+    }
+    
     /**
      * Initialization hook method.
      *

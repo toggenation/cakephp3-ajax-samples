@@ -23,9 +23,7 @@ class PostsController extends AppController
         return true;
     }
     
-    public $paginate = [
-        'limit' => 8
-    ];
+   
     
     
     public function index()

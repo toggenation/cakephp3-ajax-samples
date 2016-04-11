@@ -20,7 +20,7 @@ class TimezoneController extends AppController {
         if ($this->request->is('ajax')) {
             $this->viewBuilder()->layout('ajax'); // src/Template/Layout/ajax.ctp
         }
-        $this->viewBuilder()->layout('timezone'); // src/Template/Layout/timezone.ctp
+        //$this->viewBuilder()->layout('timezone'); // src/Template/Layout/timezone.ctp
     }
 
     public function getTime() {
