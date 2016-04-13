@@ -71,13 +71,13 @@ class TimezoneForm extends Form {
         foreach ($this->cities as $k => $v) {
             if (strcasecmp($city, $v['city']) == 0) {
                 date_default_timezone_set($v['tz']);
-                $content = '<div class="alert alert-success" role="alert">The time in ' . $v['city'] . ' is : <strong>' . date('D M d Y - H:i:s ', time()) . '</strong></div>';
+                $content = '<div class="alert alert-success" role="alert"><span class="glyphicon glyphicon-time"></span> The time in ' . $v['city'] . ' is : <strong>' . date('D M d Y - H:i:s ', time()) . '</strong></div>';
                 return $content;
             }
         }
 
         $ret = $form->test_func();
-        $content = '<div class="alert alert-danger" role="alert">An Unexpected ' . $ret . ' Error Occured </div>';
+        $content = '<div class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> An Unexpected ' . $ret . ' Error Occured </div>';
 
         return $content;
     }

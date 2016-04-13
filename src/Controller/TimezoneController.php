@@ -65,7 +65,7 @@ class TimezoneController extends AppController {
 
 
                 if (count($errors) > 0) {
-                    $content = '<div class="alert alert-danger" role="alert">Could not get timezone. The following errors occurred: ';
+                    $content = '<div class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Could not get timezone. The following errors occurred: ';
                     $content .= '<ul>';
                     foreach ($flatErrors as $key => $value) {
                         $content .= '<li><strong>' . $value . '</strong></li>';
