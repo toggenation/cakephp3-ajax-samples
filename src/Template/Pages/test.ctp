@@ -65,7 +65,7 @@ $this->append('script', $script_append);
     
     .carousel-inner > .item > img {
         position: absolute;
-        top: 50px;
+        top: 0px;
         left: 0;
         min-width: 100%;
         height: auto;

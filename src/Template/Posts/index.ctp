@@ -1,8 +1,7 @@
-<div class="container">
-    
+<div class="container"> <!-- posts -->
     <div class="row">
         <div class="col-md-2">
-            <nav class="navbar-left nav nav-pills nav-stacked sidebar-module" id="actions-sidebar">
+            <nav class="nav nav-stacked" id="actions-sidebar">
                 <ul class="nav nav-pills nav-stacked">
                     <li class="heading"><?= __('Actions') ?></li>
                     <li><?= $this->Html->link(__('New Post'), ['action' => 'add']) ?></li>
