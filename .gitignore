@@ -6,3 +6,6 @@
 composer.phar
 /bower_components
 .DS_Store
+webroot/bootstrap_ui
+webroot/contact_manager
+webroot/debug_kit
