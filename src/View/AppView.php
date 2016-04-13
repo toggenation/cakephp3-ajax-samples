@@ -40,7 +40,7 @@ class AppView extends UIView
         
         parent::initialize();
         
-        $this->loadHelper('Posts');
-    
+     //   $this->loadHelper(['Posts', 'Here']);
+        $this->viewBuilder()->helpers(['Posts', 'Here']);
     }
 }
