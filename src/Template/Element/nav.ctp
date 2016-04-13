@@ -1,4 +1,5 @@
-<div class="container">
+
+<div class="container" style="margin-bottom: 50px;">
 
 <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
     <div class="navbar-header">
@@ -14,12 +15,12 @@
     </div>
     <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-            <li><?php echo $this->Html->link("Test", ['controller' => 'pages', 'action' => 'test']); ?></li>
-            <li><?php echo $this->Html->link("Timezone", '/'); ?></li>
-            <li><?php echo $this->Html->link("Posts", [ 'controller' => 'posts', 'action' => 'index']); ?></li>
-            <li><?php echo $this->Html->link("Users", [ 'controller' => 'users', 'action' => 'index']); ?></li>
-            <li><?php echo $this->Html->link("Bookmarks", [ 'controller' => 'bookmarks', 'action' => 'index']); ?></li>
-            <li><?php echo $this->Html->link("Tags", [ 'controller' => 'Tags', 'action' => 'index']); ?></li>
+            <li <?php  if ( strtolower($this->request->here) === '/pages/test' ) { echo 'class="active"'; } ; ?>><?php echo $this->Html->link("Test", ['controller' => 'pages', 'action' => 'test']); ?></li>
+            <li <?php  if ( strtolower($this->request->here) === '/' ) { echo 'class="active"'; } ; ?>><?php echo $this->Html->link("Timezone", '/'); ?></li>
+            <li <?php  if ( strtolower($this->request->here) === '/posts' ) { echo 'class="active"'; } ; ?>><?php echo $this->Html->link("Posts", [ 'controller' => 'posts', 'action' => 'index']); ?></li>
+            <li <?php  if ( strtolower($this->request->here) === '/users' ) { echo 'class="active"'; } ; ?>><?php echo $this->Html->link("Users", [ 'controller' => 'users', 'action' => 'index']); ?></li>
+            <li <?php  if ( strtolower($this->request->here) === '/bookmarks' ) { echo 'class="active"'; } ; ?>><?php echo $this->Html->link("Bookmarks", [ 'controller' => 'bookmarks', 'action' => 'index']); ?></li>
+            <li <?php  if ( strtolower($this->request->here) === '/tags' ) { echo 'class="active"'; } ; ?>><?php echo $this->Html->link("Tags", [ 'controller' => 'Tags', 'action' => 'index']); ?></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" > Social <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -28,11 +29,10 @@
                     <li><?php echo $this->Html->link("Google+", "http://plus.google.com", ['target' => '_blank']) ; ?></li>
                 </ul>
             </li>
-            <li><?php echo $this->Html->link("Logout", [ 'controller' => 'users', 'action' => 'logout']); ?></li>
+            <li <?php  if ( strtolower($this->request->here) === '/users/login' ) { echo 'class="active"'; } ; ?>><?php echo $this->Html->link("Logout", [ 'controller' => 'users', 'action' => 'logout']); ?></li>
         </ul>
     </div>
     
 </nav>
-    
 </div>
 

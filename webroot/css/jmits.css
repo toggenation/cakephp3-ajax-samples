@@ -1,0 +1,11 @@
+/* custom styles aka james */
+jmits {
+    body: bold;
+}
+
+li.heading {
+    
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 0px;
+}

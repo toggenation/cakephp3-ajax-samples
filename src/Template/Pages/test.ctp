@@ -83,6 +83,20 @@ $this->append('script', $script_append);
         height: 700px;
     }
     }
+    
+    hr {
+        color: #00d4b4;
+        border-top: 1px solid;
+    }
+    img.img-circle {
+        
+        max-height: 228;
+        max-width: 228;
+    }
+    
+    .padded {
+        padding: 100px 15px;
+    }
 </style>
 
  <div id='myCarousel' class='slide carousel'>
@@ -158,6 +172,51 @@ montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
                     'class' => 'right carousel-control',
                     'escape'  => false]
                     ); ?>
+    </div> <!-- end carousel -->
+    
+    <div class="container padded">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>FOUR MODES</h2>
+                <hr>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-3">
+                <?php echo $this->Html->image('computer.jpeg', ['class' => 'img-responsive img-circle']);?>
+                <h3>Computers</h3>
+                <p>orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+montes, nascetur ridiculus mus. Donec quam felis, ultricies nec</p>
+                <p><?php echo $this->Html->link('View Details &raquo;', '#', ['escape' => false, 'class' => 'btn btn-default'] );?></p>
+            </div>
+             <div class="col-sm-6 col-md-3">
+                <?php echo $this->Html->image('ubuntu.jpeg', ['class' => 'img-responsive img-circle']);?>
+                <h3>Linux and Ubuntu</h3>
+                <p>orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+montes, nascetur ridiculus mus. Donec quam felis, ultricies nec</p>
+                <p><?php echo $this->Html->link('View Details &raquo;', '#', ['escape' => false, 'class' => 'btn btn-default'] );?></p>
+            </div>
+            <div class="clearfix hidden-md hidden-lg"></div>
+             <div class="col-sm-6 col-md-3">
+                <?php echo $this->Html->image('switch.jpeg', ['class' => 'img-responsive img-circle']);?>
+                <h3>Networking</h3>
+                <p>orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+montes, nascetur ridiculus mus. Donec quam felis, ultricies nec</p>
+                <p><?php echo $this->Html->link('View Details &raquo;', '#', ['escape' => false, 'class' => 'btn btn-default'] );?></p>
+            </div>
+             <div class="col-sm-6 col-md-3">
+                <?php echo $this->Html->image('server.jpeg', ['class' => 'img-responsive img-circle']);?>
+                <h3>Servers</h3>
+                <p>orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+montes, nascetur ridiculus mus. Donec quam felis, ultricies nec</p>
+                <p><?php echo $this->Html->link('View Details &raquo;', '#', ['escape' => false, 'class' => 'btn btn-default'] );?></p>
+            </div>
+        </div>
     </div>
 
 <div class="container">
@@ -323,6 +382,3 @@ fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,</p>
         </div>    
     </div>
 </div>
-
-
-    
