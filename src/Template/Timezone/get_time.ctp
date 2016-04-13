@@ -1,11 +1,11 @@
 <?php echo $this->Html->script('global', ['inline' => false, 'block' => 'script']); ?>
 
 <div class="container">
-
 <div class="row">
-        <nav class="nav col-md-2">
+    <div class="col-md-2">
+        <nav class="nav nav-stacked">
             <ul class="nav nav-stacked">
-                <li class="heading h4">Go elsewhere</li>
+                <li class="heading">Go elsewhere</li>
                 <li><?php echo $this->Html->link('Posts', ['controller' => 'posts', 'action' => 'index']); ?></li>
                 <li><?php echo $this->Html->link('Users', ['controller' => 'users', 'action' => 'index']); ?></li>
                  <li><?php echo $this->Html->link('Bookmarks', ['controller' => 'bookmarks', 'action' => 'index']); ?></li>
@@ -13,6 +13,7 @@
                   <li><?php echo $this->Html->link('Logout', ['controller' => 'users', 'action' => 'logout']); ?></li>
             </ul>
         </nav>
+        </div>
         <div class="col-md-5">
             <!-- src/Template/Timezone/get_time.ctp -->
             

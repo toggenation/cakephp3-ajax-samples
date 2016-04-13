@@ -5,3 +5,4 @@
 /nbproject/
 composer.phar
 /bower_components
+.DS_Store
