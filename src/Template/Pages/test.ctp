@@ -18,87 +18,6 @@ SCRIPT;
 $this->append('script', $script_append);
 ?>
 
-<style>
-    
-    html, body {
-        font-family: 'Lato', sans-serif;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 1.7;
-        background-color: #eeefe9;
-        
-    }
-    
-    h1, h2, h3, h4 {
-        font-family: 'Abel', sans-serif;
-    }
-    b, strong {
-        font-weight: 400;
-    }
-    
-    
-    
-    .col-lg-offset-6 {
-        background-color: pink;
-    }
-    
-    .tab-content img {
-        
-        padding-left: 20px
-    }
-    .tab-pane {
-        padding: 40px 10px 0px 10px;
-    }
-    .welcome {
-        text-align: center;
-    }
-    .ftr {
-        
-        background: url(../img/bg.jpeg) repeat;
-    }
-    .ftr address, .ftr a, .ftr p {
-        color: #fff;
-    }
-    .ftr img {
-        padding: 20px 0px 0px 0px 
-    }
-    
-    .carousel-inner > .item > img {
-        position: absolute;
-        top: 0px;
-        left: 0;
-        min-width: 100%;
-        height: auto;
-    }
-    .carousel-inner > .item {
-        height: 500px;
-    }
-    
-    .carousel-inner {
-        margin-bottom: 30px;
-    }
-    @media(min-width: 768px){
-        
-         .carousel-inner > .item {
-        height: 700px;
-    }
-    }
-    
-    hr {
-        color: #00d4b4;
-        border-top: 1px solid;
-    }
-    img.img-circle {
-        
-        max-height: 228;
-        max-width: 228;
-    }
-    
-    .padded {
-        padding: 100px 15px;
-    }
-</style>
-
  <div id='myCarousel' class='slide carousel'>
      <ol class="carousel-indicators" >
          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -217,8 +136,93 @@ montes, nascetur ridiculus mus. Donec quam felis, ultricies nec</p>
                 <p><?php echo $this->Html->link('View Details &raquo;', '#', ['escape' => false, 'class' => 'btn btn-default'] );?></p>
             </div>
         </div>
-    </div>
+    </div> <!--end circle photos -->
 
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 blog">
+                <section>
+                    <h1><?php echo $this->Html->link('Enhancing Existing Features', '#'); ?></h1>
+                    <p class="lead"><a href="index.html">Infinite Skills</a></p>
+                    <hr>
+                    <p><span class="glyphicon glyphicon-time"></span> Posted on <?php echo $this->Time->format(time()); ?></p>
+                    <hr>
+                    <?php echo $this->Html->image('dad.png', ['class' => 'img-responsive']); ?>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit! Aenean commodo ligula eget dolor? Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus; Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem; Nulla consequat massa quis enim! Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium? Integer tincidunt. Cras dapibus! Vivamus elementum semper nisi. Aenean vulputate eleifend tellus; Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim! Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus; Phasellus viverra nulla ut metus varius laoreet? Quisque rutrum? Aenean imperdiet! Etiam ultricies nisi vel augue; Curabitur ullamcorper ultricies nisi?</p>
+                    <a href="#" class="btn btn-primary">Read more &raquo;</a>
+                    <hr>
+                </section>
+                
+                <section>
+                    <h1><?php echo $this->Html->link('Existing Enhancement Futon', '#'); ?></h1>
+                    <p class="lead"><a href="index.html">Infinite Skills</a></p>
+                    <hr>
+                    <p><span class="glyphicon glyphicon-time"></span> Posted on <?php echo $this->Time->format(time()); ?></p>
+                    <hr>
+                    <?php echo $this->Html->image('switch.jpeg', ['class' => 'img-responsive']); ?>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit! Aenean commodo ligula eget dolor? Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus; Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem; Nulla consequat massa quis enim! Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium? Integer tincidunt. Cras dapibus! Vivamus elementum semper nisi. Aenean vulputate eleifend tellus; Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim! Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus; Phasellus viverra nulla ut metus varius laoreet? Quisque rutrum? Aenean imperdiet! Etiam ultricies nisi vel augue; Curabitur ullamcorper ultricies nisi?</p>
+                    <a href="#" class="btn btn-primary">Read more &raquo;</a>
+                    <hr>
+                </section>
+                
+                <section>
+                    <h1><?php echo $this->Html->link('Participation is Futile', '#'); ?></h1>
+                    <p class="lead"><a href="index.html">Infinite Skills</a></p>
+                    <hr>
+                    <p><span class="glyphicon glyphicon-time"></span> Posted on <?php echo $this->Time->format(time()); ?></p>
+                    <hr>
+                    <?php echo $this->Html->image('server.jpeg', ['class' => 'img-responsive']); ?>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit! Aenean commodo ligula eget dolor? Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus; Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem; Nulla consequat massa quis enim! Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium? Integer tincidunt. Cras dapibus! Vivamus elementum semper nisi. Aenean vulputate eleifend tellus; Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim! Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus; Phasellus viverra nulla ut metus varius laoreet? Quisque rutrum? Aenean imperdiet! Etiam ultricies nisi vel augue; Curabitur ullamcorper ultricies nisi?</p>
+                    <a href="#" class="btn btn-primary">Read more &raquo;</a>
+                    <hr>
+                </section>
+            </div>
+            <div class="col-sm-4 sidebar">
+                <section>
+                    <h3 class="tpad">Search</h3>
+                    <div class="input-group input-group-lg  tpad">
+                        <span class="input-group-addon glyphicon glyphicon-search"></span>
+                        <input type="text" class="form-control input-lg" placeholder="Search">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go</button>
+                        </span>
+                        
+                    </div>
+                    <hr>
+                </section>
+                <section>
+                    <h3 class="tpad">Tags</h3>
+                    <div class="list-group tpad">
+                        <a href="#" class="list-group-item active"><span class="badge">38</span>All Tags</a>
+                        <a href="#" class="list-group-item"><span class="badge">14</span>Speed Mode</a>
+                        <a href="#" class="list-group-item"><span class="badge">8</span>Rancid Clean</a>
+                        <a href="#" class="list-group-item"><span class="badge">7</span>Mako Sharks</a>
+                        <a href="#" class="list-group-item"><span class="badge">7</span>Mako Sharks</a>
+                        <a href="#" class="list-group-item"><span class="badge">7</span>Mako Sharks</a>
+                        <a href="#" class="list-group-item"><span class="badge">7</span>Mako Sharks</a>
+                    </div>
+                    
+                    <hr>
+                    
+                </section>
+                <section>
+                    <h3 class="tpad">Latest from Twitter</h3>
+                    <div class="media tpad">
+                        <a href="#" class="pull-left">
+                            <?php echo $this->Html->image('dad-sm.png', ['alt' => "Dad as a child", 'class' => 'media-object']) ;?>
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">@jmcd73</h4>
+                            <p class="bpad">If I used my own services I would be a multi meal in the air. You need to be a better listener. #jmits</p>
+                        </div>
+                     </div>
+                </section>
+            </div>
+        </div>
+    </div>
 <div class="container">
     <div class="row">
         <div class="col-sm-12 col-md-6 tabbable">

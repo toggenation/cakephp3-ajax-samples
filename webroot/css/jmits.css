@@ -4,8 +4,105 @@ jmits {
 }
 
 li.heading {
-    
+
     font-size: 18px;
     font-weight: 500;
     margin: 10px 0px;
+}
+
+
+
+html, body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.7;
+    background-color: #eeefe9;
+
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Abel', sans-serif;
+}
+b, strong {
+    font-weight: 400;
+}
+
+
+
+.col-lg-offset-6 {
+    background-color: pink;
+}
+
+.tab-content img {
+
+    padding-left: 20px
+}
+.tab-pane {
+    padding: 40px 10px 0px 10px;
+}
+.welcome {
+    text-align: center;
+}
+.ftr {
+
+    background: url(../img/bg.jpeg) repeat;
+}
+.ftr address, .ftr a, .ftr p {
+    color: #fff;
+}
+.ftr img {
+    padding: 20px 0px 0px 0px 
+}
+
+.carousel-inner > .item > img {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    min-width: 100%;
+    height: auto;
+}
+.carousel-inner > .item {
+    height: 500px;
+}
+
+.tpad {
+    margin-top: 25px;
+}
+
+.carousel-inner {
+    margin-bottom: 30px;
+}
+@media(min-width: 768px){
+
+    .carousel-inner > .item {
+        height: 700px;
+    }
+}
+
+hr {
+    color: #00d4b4;
+    border-top: 1px solid;
+}
+img.img-circle {
+
+    max-height: 228;
+    max-width: 228;
+}
+
+.padded {
+    padding: 40px 15px;
+}
+
+.blog h1 a {
+    color: #4b8575;
+}
+.blog p a {
+    color: #ed7337;
+}
+.sidebar {
+    background-color: #e9e6df;
+}
+.bpad {
+    margin-bottom: 20px;
 }

@@ -15,6 +15,7 @@
     </div>
     <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
+             <li <?php  if ( $this->Here->is_here(['controller' => 'pages', 'action' => 'display', 'clients']) ) { echo 'class="active"'; } ; ?>><?php echo $this->Html->link("Clients", ['controller' => 'pages', 'action' => 'display', 'clients']); ?></li>
             <li <?php  if ( $this->Here->is_here(['controller' => 'pages', 'action' => 'display', 'test']) ) { echo 'class="active"'; } ; ?>><?php echo $this->Html->link("Test", ['controller' => 'pages', 'action' => 'display', 'test']); ?></li>
             <li <?php  if ( $this->Here->is_here(['controller' => 'timezone', 'action' => 'getTime'])) { echo 'class="active"'; } ; ?>><?php echo $this->Html->link("Timezone", ['controller' => 'timezone', 'action' => 'getTime']); ?></li>
             <li <?php  if ( $this->Here->is_here([ 'controller' => 'posts', 'action' => 'index'] )) { echo 'class="active"'; } ; ?>><?php echo $this->Html->link("Posts", [ 'controller' => 'posts', 'action' => 'index']); ?></li>
