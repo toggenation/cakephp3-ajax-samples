@@ -94,7 +94,9 @@ class AppController extends Controller {
         }
      
         // 	$this->set('_serialize', false);
-        
+	
+        $this->viewBuilder()->layout('default');
+
        
     }
 
