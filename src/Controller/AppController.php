@@ -68,6 +68,12 @@ class AppController extends Controller {
             'unauthorizedRedirect' => [
                 'controller' => 'Users',
                 'action' => 'login'
+            ],
+            'flash' => [
+                'element' => 'default',
+                'params' => [
+                    'class' => ['alert', 'alert-danger']
+                ]
             ]
         ]);
 

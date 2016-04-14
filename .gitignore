@@ -1,4 +1,7 @@
+!/vendor
 /vendor/*
+!/vendor/friendsofcake
+
 /config/app.php
 /tmp/*
 /logs/*

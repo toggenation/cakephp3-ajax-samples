@@ -4,11 +4,11 @@ namespace App\View\Helper;
 use Cake\Utility\Hash;
 use Cake\View\Helper;
 use Cake\Routing\Router;
-use Cake\Log\LogTrait;
+//use Cake\Log\LogTrait;
 
 class HereHelper extends Helper {
     
-    use LogTrait;
+    //use LogTrait;
     
     public function is_here($here_array = []){
         
@@ -23,8 +23,8 @@ class HereHelper extends Helper {
            $current_request = Hash::merge($current_request, $passed_args);
        }
        
-       $this->log(['current_request' => Router::url($current_request),
-                    'here_array' => Router::url($here_array)]);
+      // $this->log(['current_request' => Router::url($current_request),
+      //              'here_array' => Router::url($here_array)]);
       
         return strtolower(Router::url($current_request)) === strtolower(Router::url($here_array));
     }
