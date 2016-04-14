@@ -70,9 +70,9 @@ class AppController extends Controller {
                 'action' => 'login'
             ],
             'flash' => [
-                'element' => 'default',
+                'element' => 'error',
                 'params' => [
-                    'class' => ['alert', 'alert-danger']
+                    'class' => ['alert']
                 ]
             ]
         ]);

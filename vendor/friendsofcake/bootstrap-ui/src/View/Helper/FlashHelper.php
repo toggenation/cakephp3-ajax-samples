@@ -67,10 +67,12 @@ class FlashHelper extends Helper
             if (strpos($element, '.') === false &&
                 preg_match('#Flash/(default|success|error|info|warning)$#', $element, $matches)
             ) {
-                $this->log($matches);
+                
                 $class = $matches[1];
                 $class = str_replace(['default', 'error'], ['info', 'danger'], $class);
-
+                
+                $this->log(['message' => $message, 'class' => $class]);
+                
                 if (is_array($message['params']['class'])) {
                     $message['params']['class'][] = 'alert-' . $class;
                 }
