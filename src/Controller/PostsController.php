@@ -24,6 +24,9 @@ class PostsController extends AppController
     }
     
    
+    public $paginate = [
+        'limit' => 8
+    ];
     
     
     public function index()
