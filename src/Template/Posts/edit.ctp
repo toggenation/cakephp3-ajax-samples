@@ -32,6 +32,6 @@
     <div id="loadingDiv" style="display:none;">
         <?php echo $this->Html->image('ajax-loader.gif', array('alt' => 'Loading...')); ?>
     </div>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Submit'), ['class' => 'primary']) ?>
     <?= $this->Form->end() ?>
 </div>

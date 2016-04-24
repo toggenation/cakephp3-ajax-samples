@@ -21,7 +21,7 @@
             echo $this->Form->input('tags._ids', ['options' => $tags]);
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Submit'), ['class' => 'primary']) ?>
     <?= $this->Form->end() ?>
 </div>
 </div>

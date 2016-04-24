@@ -46,6 +46,9 @@ if (!$this->fetch('tb_flash')) {
     if (isset($this->Flash))
         echo $this->Flash->render();
         echo $this->Flash->render('auth');
+        $this->log([ 'render' => $this->Flash->render()]);
+        $this->log(['render_auth' => $this->Flash->render('auth')]);
+        
     $this->end();
 }
 if (!$this->fetch('tb_body_end')) {

@@ -9,14 +9,17 @@ $this->prepend('css', $gfonts);
             <div class="col-xs-3">
                 <?php echo $this->Html->image("jmits.png", ['class' => 'tpad']); ?>
             </div>
+            <div class="clearfix visible-xs"></div>
             <div class="col-xs-9">
                 <h1>JMITS <span class="text-muted">&raquo; Clients </span></h1>
                 <p class="lead">We lead the world in living in Melbourne. Have a look for your self</p>
 
 
             </div>
+            
         </div>
     </div>
+</div>
     <div class="container padded">
         <div class="row">
             <div class="col-lg-12">

@@ -75,14 +75,15 @@ $(document).ready(function () {
         
         if(errortype == 'success'){
             classes += ' alert alert-success';
+            icon =  "glyphicon-ok-circle";
         } else {
             classes += ' alert alert-danger';
-            
+            icon = 'glyphicon-exclamation-sign';
         };
         
         var _insert = $(document.createElement('div')).css('display', 'none');
         _insert.attr('id', 'flashMessage').addClass(classes).text(message);
-        
+        _insert.prepend($icon = '<span class="glyphicon ' + icon +  '" aria-hidden="true"></span> ');
         _insert.insertAfter($("legend")).fadeIn();
     }
 

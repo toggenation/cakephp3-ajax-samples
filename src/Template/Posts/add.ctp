@@ -35,7 +35,7 @@
         <?php echo $this->Html->image('ajax-loader.gif', array('alt' => 'Loading...')); ?>
     </div>
 
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Submit'), ['class' => 'btn btn-primary']) ?>
     <?= $this->Form->end() ?>
 
 </div>

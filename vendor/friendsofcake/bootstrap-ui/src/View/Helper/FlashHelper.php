@@ -58,6 +58,7 @@ class FlashHelper extends Helper
         }
 
         $out = '';
+        
         foreach ($stack as $message) {
             $message = $options + $message;
             $message['params'] += $this->_config;
@@ -69,6 +70,7 @@ class FlashHelper extends Helper
             ) {
                 
                 $class = $matches[1];
+                
                 $class = str_replace(['default', 'error'], ['info', 'danger'], $class);
                 
                 $this->log(['message' => $message, 'class' => $class]);
@@ -76,12 +78,16 @@ class FlashHelper extends Helper
                 if (is_array($message['params']['class'])) {
                     $message['params']['class'][] = 'alert-' . $class;
                 }
+                
                 $element = $this->_config['element'];
+                
             }
 
             $out .= $this->_View->element($element, $message);
         }
-
+        
+        $this->log($out);
+        
         return $out;
     }
 

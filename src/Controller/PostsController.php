@@ -127,7 +127,7 @@ class PostsController extends AppController
         
          if ($this->request->is('ajax')){
              
-             $this->log($this->request->data);
+            // $this->log($this->request->data);
              
              $post = $this->Posts->patchEntity($post, $this->request->data);
              
