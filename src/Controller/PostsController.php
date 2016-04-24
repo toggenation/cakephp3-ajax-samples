@@ -21,7 +21,6 @@ class PostsController extends AppController
     
     public $paginate = [
         'limit' => 8
-        
     ];
     
     
